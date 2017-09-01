@@ -17,3 +17,10 @@ REG add HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced /v Hide
 REG add HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Search /t REG_DWORD /v SearchboxTaskbarMode /d 0 /f
 :: Show hidden files/folders
 REG add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v Hidden /t REG_DWORD /d 1 /f
+:: Disable start menu ads
+REG Add "HKCU\SOFTWARE\Policies\Microsoft\Windows\CloudContent" /T REG_DWORD /V "DisableWindowsConsumerFeatures" /D 1 /F
+:: Configure screen saver
+REG Add "HKCU\Control Panel\Desktop" /T REG_SZ /V "ScreenSaveActive" /D 1 /F
+REG Add "HKCU\Control Panel\Desktop" /T REG_SZ /V "ScreenSaverIsSecure" /D 1 /F
+REG Add "HKCU\Control Panel\Desktop" /T REG_SZ /V "ScreenSaveTimeOut" /D 180 /F
+Stop-Process -processname explorer
