@@ -7,7 +7,7 @@ cls
 :: -t7z Sets the archive type to 7z, if no type is set 7z will set the type based on file xtension.
 :: -p Sets the password. EXAMPLE: -pfuzzybunnies
 :: -uq0 deletes files in the archive that do not exist in the backup location i.e. files that have been deleted since last backup
-:: -mhe=on Turns encryption on.
+:: -mhe=on Turns encryption on NOTE: When -t7z is used, encryption is set to AES256 by default.
 :: -xr!"exact\path\to\folder\" excludes a specific folder
 :: -xr!"exact\path\to\file.ext excludes a specific file
 :: -xr!*.ext excludes all files with the .ext extension
