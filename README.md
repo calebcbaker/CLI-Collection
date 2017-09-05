@@ -14,6 +14,7 @@ Features
 * Disable start menu suggested apps (ads)
 * Set screen saver timeout to 3 minutes
 * Require password on wake
+* Remove Mail and Store pinned apps from taskbar
 
 # 7zbackup.bat
 Create an AES encrypted backup using 7-Zip
