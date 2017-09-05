@@ -1,4 +1,4 @@
-D@echo %DATE% %TIME%
+@echo %DATE% %TIME%
 @set /p pwd=Enter Archive Password: 
 cls
 
